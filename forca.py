@@ -1,23 +1,30 @@
 def forca(tentativa):
-    f1 = " +--------+ "
-    f2 = " |          "
-    f3 = " |          "
-    f4 = " |          "
-    f5 = " |          "
-    f6 = " |          "
-    f7 = "_|__________"
+    f1 = "  +--------+  "
+    f2 = "  |           "
+    f3 = "  |           "
+    f4 = "  |           "
+    f5 = "  |           "
+    f6 = "  |           "
+    f7 = "__|___________"
 
     if tentativa>= 1:
-        f2 = "   |      | "
+        f2="  |         | "
     if tentativa>= 2:
-        f3="     |    o  "
+        f3="  |         o "
     if tentativa>= 3:
-        f4 = " |       | "
-    if tentativa>= 4:  
-       f5 = " |        |  "
-    if tentativa>= 5:    
-         f6 = " |       / \ "       
-    print(f1) 
+        f4="  |         | "
+    if tentativa>= 4:
+        f4="  |        /| "
+    if tentativa>=5:
+        f4="  |        /|\ "    
+    if tentativa>=6:
+        f5="  |         |"  
+    if tentativa>=7:
+        f6="  |        /   "
+    if tentativa>=8:  
+        f6="  |        / \ "  
+
+    print(f1)
     print(f2)
     print(f3)
     print(f4)
@@ -25,28 +32,39 @@ def forca(tentativa):
     print(f6)
     print(f7)
 
-def Continua():
+
+def continua():
     while True:
-        print("-" * 20)
-        Novamente = input("Quer jogar de novo S/N:").upper()
-        if Novamente == "S":
-            Acabou = True
+        print("-" * 20 )
+        novamente = input("Quer jogar de novo S/N: "). upper()
+        if novamente == "S":
+            acabou = True
             break
-        elif Novamente == "N":
-            Acabou = False
+        elif novamente == "N":
+            acabou = False
             break
         else:
             print("Digite S ou N ")
-    return Acabou  
-
-Jogar = True
-x=0
-while Jogar :
-    print(x)
-    forca(x)
-    Jogar = Continua()
-
-
-
+    return acabou
+     
+##jogar = True
+##x=0
+##while jogar :
+    ##print(x)
+    ##forca(x)
+    ##jogar = continua()
+forca(0)
 
 
+def sorteiapalavra ():
+    lista = ["amor","paz","prosperidade","ajuda","salvação"]
+    return random.choice (lista)
+
+import random
+
+
+
+
+
+
+print(sorteiapalavra())
